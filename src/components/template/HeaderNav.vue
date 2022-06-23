@@ -9,7 +9,7 @@
         <div class="container-fluid">
 
           <a class="navbar-brand" href="#">
-            <router-link to="/" class="link mx-5">Vue JS Movies</router-link>
+            <router-link to="/" class="link mx-5" id="titreNav">Vue JS Movies</router-link>
           </a>
 
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -26,7 +26,10 @@
                 <router-link to="/AmericanMovies" class="link text-center nav-link mx-5">Films américains</router-link>
               </li>
               <li class="nav-item">
-                <router-link to="/TopRatedMovies" class="link text-center nav-link mx-5">Top 50 : les mieux notés
+                <router-link to="/LastMovies" class="link text-center nav-link mx-5">Films de 2022</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link to="/Top50Movies" class="link text-center nav-link mx-5">Top 50 : les mieux notés
                 </router-link>
               </li>
               <li class="nav-item">
@@ -43,6 +46,7 @@
 </template>
 
 <script>
+
 export default {
   name: "HeaderNav",
 };
@@ -56,6 +60,11 @@ export default {
   letter-spacing: 4vw;
 }
 
+#titreNav {
+  font-family: 'Zen Tokyo Zoo', sans-serif;
+  font-size: larger;
+}
+
 header {
   margin-top: -60px;
 }
@@ -63,5 +72,15 @@ header {
 .link {
   text-decoration: none;
   color: inherit;
+}
+
+@media screen and (max-width: 1024px) {
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
 }
 </style>

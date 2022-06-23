@@ -49,7 +49,6 @@ export default {
         .then((response) => {
           this.movies = response.data.results;
         });
-      console.log(this.results);
     },
   },
 };

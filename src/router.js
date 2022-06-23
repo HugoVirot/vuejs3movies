@@ -1,14 +1,19 @@
 import { createWebHistory, createRouter } from "vue-router";
 
 // on importe les différents composants
+import App from "./App.vue"
 import AmericanMovies from "./components/AmericanMovies.vue";
 import FrenchMovies from "./components/FrenchMovies.vue";
-import TopRatedMovies from "./components/TopRatedMovies.vue";
+import Top50Movies from "./components/Top50Movies.vue";
 import LastMovies from "./components/LastMovies.vue";
 import SearchMovies from "./components/SearchMovies.vue";
 import MovieDetails from "./components/MovieDetails.vue";
 
 const routes = [   // on déclare les routes
+  {
+    path: '/',   // path = url
+    component: App  // composant associé 
+  },
   {
     path: '/AmericanMovies',   // path = url
     component: AmericanMovies  // composant associé 
@@ -18,8 +23,8 @@ const routes = [   // on déclare les routes
     component: FrenchMovies
   },
   {
-    path: '/TopRatedMovies',
-    component: TopRatedMovies
+    path: '/Top50Movies',
+    component: Top50Movies
   },
   {
     path: '/LastMovies',
@@ -36,9 +41,8 @@ const routes = [   // on déclare les routes
 ]
 
 const router = createRouter({
-    history: createWebHistory(),
-    routes,
-  });
-  
-  export default router;
-  
+  history: createWebHistory(),
+  routes,
+});
+
+export default router;
